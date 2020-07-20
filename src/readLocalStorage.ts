@@ -1,4 +1,4 @@
-export const readLocalStorage = <S = object>(key: string, defaultValue?: S): S | undefined => {
+export const readLocalStorage = <TValue = object>(key: string, defaultValue?: TValue): TValue | undefined => {
   try {
     return JSON.parse(localStorage.getItem(key) || "") || defaultValue
   } catch (error) {
